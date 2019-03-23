@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Maker</title>
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
+    <!-- Comment out (or don't include) services that you don't want to use -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script> -->
+
+    <script src="/__/firebase/init.js"></script>
+
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    <a href="/" id="home" target="_self">HOME</a>
+    <input type="email" name="email" id="email">
+    <input type="password" name="pass" id="pass">
+    <button type="submit" id="regbtn">Register</button>
+    <button type="submit" id="logbtn">Login</button>
+    <button type="submit" id="logobtn">Logout</button>
+
+    <script>
+        document.querySelector("#regbtn").addEventListener('click', e => {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+            const auth = firebase.auth();
+
+            let promise = auth.createUserWithEmailAndPassword(email, pass);
+
+            promise.catch(e => console.log(e.message));
+        })
+
+        document.querySelector("#logbtn").addEventListener('click', e => {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+            const auth = firebase.auth();
+
+            let promise = auth.signInWithEmailAndPassword(email, pass);
+
+            promise.catch(e => console.log(e.message));
+        })
+
+        document.querySelector("#logobtn").addEventListener('click', e => {
+            firebase.auth().signOut();
+        })
+
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser){
+                console.log(firebaseUser);
+                $.ajax({
+                    type:'POST',
+                    url:'login.html',
+                    data:{
+                        email: firebaseUser.email,
+                        uid: firebaseUser.uid
+                    },
+                    success: (res) => {
+                        document.querySelector('#home').click();
+                    }
+                })
+            }
+            else{
+                console.log(firebaseUser);
+                $.ajax({
+                    type:'POST',
+                    url:'login.html',
+                    data: {uid: null},
+                    success: (res) => {
+                        document.querySelector('#home').click();
+                    }
+                })
+            }
+        })
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Firebase App is always required and must be first -->
+    <script src="/__/firebase/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="/__/firebase/5.9.1/firebase-auth.js"></script>
+    <script src="/__/firebase/5.9.1/firebase-database.js"></script>
+    <script src="/__/firebase/5.9.1/firebase-messaging.js"></script>
+    <script src="/__/firebase/5.9.1/firebase-functions.js"></script>
+
+    <!-- Comment out (or don't include) services that you don't want to use -->
+    <!-- <script src="/__/firebase/5.9.1/firebase-storage.js"></script> -->
+
+    <script src="/__/firebase/init.js"></script>
+
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+
+        <script>
+            $(document).ready(() => {
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    success: (res) => {
+                        console.log(res.email);
+                        if (res.email){
+                            document.querySelector('#hmm').innerHTML = `<a href="login.html" target="_blank" class="nav-link">Login</a><p>${res.email}</p>`;
+                        }
+                        else {
+                            document.querySelector('#hmm').innerHTML = `<a href="login.html" target="_blank" class="nav-link">Login</a>`;
+                        }
+                    }
+                })
+            })
+        </script>
+
+    <header>
+        <nav>
+            <h1>Website<i class="fas fa-bars"></i></h1>
+            <div id="nav-links">
+                <a href="#topics" target="_self" class="nav-link"><div>Topics</div></a>
+                <a href="html/feedback.html" target="_self" class="nav-link">Feedback</a>
+                <div id="hmm" class="nav-link"></div>
+
+                <!-- <button type="button" id="loginbtn" class="nav-link">Login</button> -->
+            </div>
+        </nav>
+        <div class="stripes">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="banner-content">
+            <div id="intro">
+                <h1>Welcome to the new platform to learn CS</h1>
+                <p>This site was made to help beginners and professionals alike to develop their skills in different technologies used
+                    in the ever-developing field of computer science and information technology.</p>
+                <button type="button" class="mat-button-class">Learn Now</button>
+            </div>
+            <div id="search">
+                <h1>Enter a topic to search:</h1>
+                <div id="search-container">
+                    <input type="text"/>
+                    <button type="button" class="mat-button-class">Go</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About this website</h1>
+            <p>
+                This website was made for aspiring learners who want to gain more knowledge
+                but do not have the right resources.
+                And that is what this website aims to provide.
+                All the topics here have links to the websites and pages
+                to learn them. These links are ranked according to popularity and rating,
+                which means, those which provide better results for others
+                are placed a beginning.
+            </p>
+        </section>
+
+        <section id="topic-part">
+            <div class="topic-stripe">
+            </div>
+            <section id="topics">
+                <h1>Topics</h1>
+                <div id="topic-items">
+                    <a href="html/datastructures.html" target="_self"><div>Data Structures</div></a>
+                    <a href="#"><div>Algorithms</div></a>
+                    <a href="#"><div>Networks</div></a>
+                    <a href="#"><div>Web Development</div></a>
+                    <a href="#"><div>Artificial Intelligence</div></a>
+                    <a href="#"><div>Database</div></a>
+                    <a href="#"><div>Languages</div></a>
+                    <a href="#"><div>Computer Architecture</div></a>
+                    <a href="#"><div>Distributed Systems</div></a>
+                </div>
+            </section>
+        </section>
+
+        <section id="feedback">
+            <h1>Have any queries? Or just want us to add a topic.</h1>
+            <h2>Hit the feedback button and tell us what you want.</h2>
+            <a href="#" class="mat-button-class">Feedback</a>
+        </section>
+    </main>
+
+    <footer>
+        <div id="team">
+            <h2>Our Team</h2>
+            <p>Pragun</p>
+            <p>Anubhav</p>
+            <p>Priyanshu</p>
+            <p>Kuldeep</p>
+        </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>Address: NIT Kurukshetra</p>
+            <p>Phone: +91-7042080779</p>
+            <p>Email: abc.xyz</p>
+        </div>
+        <div id="social">
+            <h2>Social</h2>
+            <div>
+                <span><i class="fab fa-facebook fa-2x"></i></span>
+                <span><i class="fab fa-twitter-square fa-2x"></i></span>
+                <span><i class="fab fa-youtube fa-2x"></i></span>
+                <span><i class="fab fa-linkedin fa-2x"></i></span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script>
+        // let btnLogin = document.querySelector('#loginbtn');
+
+        // btnLogin.addEventListener('click', e => {
+        //     const auth = firebase.auth();
+
+        //     const promise = auth.createUserWithEmailAndPassword('pragun123@hotmail.co.uk', 'pragun');
+        //     promise.catch(e => console.log(e.message));
+        // })
+    </script>
+
+
+</body>
+</html>

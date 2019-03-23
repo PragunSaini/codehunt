@@ -1,0 +1,452 @@
+/* Global Classes and Styles */
+.mat-button-class {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all .15s ease;
+    box-shadow:  0 4px 6px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+body {
+    font-family: Raleway;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL Styles END */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles BEGIN */
+
+header {
+    position: relative;
+}
+
+/* NAVBAR */
+nav {
+    position: absolute;
+    margin: 1% 13%;
+    width: 74%;
+    height: 6em;
+    color: white;
+    background: transparent;
+    /* border: 1px solid black; */
+    z-index: 1;
+    display: grid;
+    /* grid-gap: 1em; */
+    grid-template-columns: 10fr 6fr;
+    align-items: center;
+}
+
+nav h1 {
+    font-weight: bold;
+    margin-left: 2em;
+    font-size: 2em;
+    justify-self: left;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+}
+
+nav h1 i {
+    visibility: hidden;
+}
+
+#nav-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    justify-self: center;
+}
+/* NAVBAR ENDS */
+
+/* Main Gradient Stripes Styles */
+header .stripes {
+    display: grid;
+    grid: repeat(5, 175px) / repeat(10, 1fr);
+    background: rgb(85,27,211); /* Old browsers */
+    background: -moz-linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+    transform: skewY(-12deg);
+    transform-origin: 0;
+}
+
+header .stripes :nth-child(1) {
+    grid-column: span 3;
+    background: rgb(85,51,255);
+    background: linear-gradient(150deg, #297AFF 15%, #375FFF 100%);
+}
+
+header .stripes :nth-child(2) {
+    grid-area: 5 / span 3 / auto / -1;
+    background: linear-gradient(150deg, #20D6F3 15%, #64F0D8 100%);
+}
+
+header .stripes :nth-child(3) {
+    grid-row: 5;
+    grid-column: span 3;
+    background: linear-gradient(150deg, #2B76FF 15%, #179DFF 100%);
+}
+
+#banner-content {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 70%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#banner-content h1 {
+    font-size: 3em;
+    margin: none;
+    text-transform: uppercase;
+}
+
+#banner-content p {
+    font-size: 2em;
+}
+
+/* HEADER STYLES END */
+
+
+/* MAIN STYLES BEGIN */
+
+main {
+    position: relative;
+}
+
+.main-stripes {
+    width: 100%;
+    height: calc(8*150px);
+    position: absolute;
+    display: grid;
+    grid: repeat(8, 150px) / repeat(10, 1fr);
+    background: rgb(215,215,215);
+    background: linear-gradient(150deg, rgba(215,215,215,1) 0%, rgba(201,225,255,1) 100%);
+    transform: skewY(-12deg);
+    transform-origin: 0;
+}
+
+.main-stripes :nth-child(1) {
+    grid-column: span 3;
+    background: rgb(85,51,255);
+    background: linear-gradient(90deg, #297AFF 15%, #CFD3DA 100%);
+}
+
+.main-stripes :nth-child(2) {
+    grid-area: 8 / span 3 / auto / -1;
+    background: linear-gradient(-90deg, rgb(74, 140, 238) 15%, #CBD4E7 80%);
+}
+
+.main-stripes :nth-child(3) {
+    grid-row: 6;
+    grid-column: span 3;
+    background: linear-gradient(90deg, #2B76FF 15%, #CFD3DA 100%);
+}
+
+
+#feedbackform {
+    position: relative;
+    width: 90%;
+    margin: 0em auto 2em auto;
+    color: #421BFF;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px #000000;
+    /* border: 1px solid black; */
+}
+
+.form-element {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-gap: 4em;
+    align-items: center;
+    margin: 0 auto 2em auto;
+}
+
+.label {
+    justify-self: end;
+    text-align: right;
+    align-self: flex-start;
+    font-size: 2em;
+}
+
+.input {
+    justify-self: start;
+    width: 50%;
+    height: 2rem;
+    font-size: 1.5em;
+    padding-left: 1%;
+}
+
+.form-element textarea {
+    width: 50%;
+    height: 10em;
+    font-size: 1.5em;
+    padding-left: 1%;
+}
+
+.input-age {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 50%;
+}
+
+.input-age label {
+    /* align-self:  */
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+
+.input-age input {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.input-query {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.25em;
+    width: 50%;
+}
+
+.input-query label {
+    font-size: 1.5em;
+}
+
+.input-query input {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+
+.submit {
+    margin-top: 2em;
+    grid-column: 1 / 3;
+    width: 30%;
+    height: 5em;
+    justify-self: center;
+    background: rgb(125, 83, 240);
+    color: white;
+}
+
+.submit:active {
+    box-shadow: 4px 4px 6px 1px inset rgba(33, 33, 34, 0.767);
+    margin-top: 2.1em;
+    margin-bottom: -0.1em;
+}
+
+.clear {
+    grid-column: 1 / 3;
+    width: 30%;
+    height: 5em;
+    justify-self: center;
+    background: rgb(230, 67, 67);
+    color: white;
+}
+
+.clear:active {
+    margin-top: 2px;
+    box-shadow: 4px 4px 6px 1px inset rgba(33, 33, 34, 0.767);
+}
+
+footer {
+    margin-top: 20em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(189, 189, 190, 0.822);
+    background: #F5F8FC;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: 1.15em;
+    font-weight: 800;
+    color: rgba(79, 79, 80, 0.822);
+}
+
+footer p:hover {
+    color: black;
+}
+
+footer i:hover {
+    cursor: pointer;
+    color: black;
+}
+
+footer h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+footer #team {
+    text-align: center;
+    grid-column: 2 / 4;
+}
+
+footer #contact {
+    text-align: center;
+    grid-column: 5 / 7;
+}
+
+footer #social {
+    grid-column: 8 / 10;
+    text-align: center;
+}
+
+footer #social div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-auto-rows: 100%;
+    /* grid-gap: 0.1em; */
+}
+
+footer #social div span {
+    grid-column: span 1;
+}
+
+/* BODY STYLES END */
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px){
+
+    nav {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+
+    nav h1 {
+        margin: 1% 0;
+        justify-self: center;
+        justify-items: center;
+    }
+
+    nav h1 i {
+        cursor: pointer;
+        visibility: visible;
+    }
+
+    #nav-links {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        display: none;
+    }
+
+    header .stripes {
+        grid: repeat(5, 155px) / repeat(10, 1fr);
+    }
+
+    #banner-content {
+        top: 50%;
+        height: 60%;
+    }
+
+    #banner-content h1 {
+        font-size: 2em;
+    }
+
+    #bannerr-content p {
+        font-size: 1.5em;
+    }
+
+
+    .main-stripes :nth-child(3){
+        grid-row: 8;
+    }
+
+    #feedbackform {
+        width: 95%;
+        padding-top: 2em;
+    }
+
+    .form-element {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+
+    .label {
+        justify-self: center;
+        font-size: 1.5em;
+    }
+
+    .input {
+        width: 80%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .form-element textarea {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .input-age {
+        font-size: 12px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        width: 90%;
+    }
+
+    .input-query {
+        font-size: 12px;
+        width: 60%;
+        justify-items: end;
+    }
+
+    .submit, .clear {
+        height: 3em;
+    }
+
+    footer {
+        margin-top: 7em;
+        grid-template-columns: 1fr;
+    }
+
+    footer #team {
+        grid-column: 1 / 2;
+    }
+
+    footer #contact {
+        grid-column: 1 / 2;
+    }
+
+    footer #social {
+        grid-column: 1 / 2;
+    }
+
+    footer #social div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 2em;
+    }
+
+}

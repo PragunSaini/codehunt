@@ -1,0 +1,46 @@
+{
+    "datalinks": [
+        {
+            "title": "array",
+            "desc": "An array is a collection of items",
+            "links": [
+                {
+                    "key": "a",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                },
+                {
+                    "key": "b",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                },
+                {
+                    "key": "c",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                }
+            ]
+        },
+        {
+            "title": "linked list",
+            "desc": "An linked list is a collection of items",
+            "links": [
+                {
+                    "key": "d",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                },
+                {
+                    "key": "e",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                },
+                {
+                    "key": "f",
+                    "score": "0",
+                    "link": "Geeks for Geeks"
+                }
+            ]
+        }
+    ]
+}

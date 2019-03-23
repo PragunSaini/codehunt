@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Structures | Topic</title>
+
+    <link rel="stylesheet" href="../styles/datastructures.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+
+    <script>
+
+        let loggedUser = {uid: null, email: null, userVoted: []};
+
+
+        function upvoted(id){
+            console.log(loggedUser.uid);
+            let element = document.querySelector("#" + id);
+            if (loggedUser.uid){
+                let datatosend = {
+                    remove: null,
+                    add: null
+                }
+                if (element.firstChild.style.borderColor == 'orange transparent'){
+                    element.firstChild.style.borderColor = 'grey transparent'
+                    datatosend.remove = id;
+                }
+                else {
+                    element.firstChild.style.borderColor = 'orange transparent'
+                    datatosend.add = id;
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'datastructurespost.html',
+                    data: datatosend,
+                    success: (res) => {
+                        console.log(res);
+                    }
+                })
+            }
+            else {
+                alert('Log in first');
+            }
+        }
+
+
+        $(document).ready(() => {
+            $.ajax({
+                type: 'POST',
+                url: 'datastructures.html',
+                success: (res) => {
+                    console.log(res);
+                    if (res.uid){
+                        loggedUser.uid = res.uid;
+                        loggedUser.email = res.email;
+                        loggedUser.userVoted = res.userVoted;
+                    }
+                    let data = "";
+                    data += `<section class="datalinks"><div class="topic-sprite"></div>`;
+                    datalinks = res['datalinks'];
+                    for (let i = 0; i < datalinks.length; i++){
+                        data += `<section class="topic"><h1 id="title">${datalinks[i].title}</h1><p id="desc">${datalinks[i].desc}</p>`;
+                        let links = datalinks[i].links;
+                        for (let j = 0; j < links.length; j++){
+                            data += `<div class="item" id="${links[j].key}"><div class="up-arrow"></div><p class="score">Score : ${links[j].score}</p><a href="#" class="link">${links[j].link}</a></div>`;
+                        }
+                        data += `</section>`;
+                    }
+                    data += `</section>`;
+                    document.querySelector('main').innerHTML = data;
+                },
+                complete: () => {
+
+                    for(let i = 0; i < loggedUser.userVoted.length; i++){
+                        console.log(i);
+                        let element = document.getElementById(loggedUser.userVoted[i]);
+                        if (element){
+                            element.firstChild.style.borderColor = 'orange transparent';
+                        }
+                    }
+
+                    let items = document.querySelectorAll('.up-arrow');
+                    for(let i = 0; i < items.length; i++){
+                        items[i].addEventListener('click', e => {
+                            upvoted(e.target.parentElement.id);
+                        })
+                    }
+                }
+            })
+        })
+
+    </script>
+
+
+    <header>
+        <div class="stripes">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <h1>Website</h1>
+            <div id="nav-links">
+                <a href="#topics" target="_self" class="nav-link"><div>Topics</div></a>
+                <a href="#" target="_blank" class="nav-link">Feedback</a>
+            </div>
+        </nav>
+        <div id="banner-content">
+            <h1>Data Structures</h1>
+            <p>In computer science, a data structure is a data organization, management and storage format that enables efficient
+            access and modification. More precisely, a data structure is a collection of data values, the relationships
+            among them, and the functions or operations that can be applied to the data.
+            Different types of data structures are suited to different kinds of applications,
+            and some are highly specialized to specific tasks.
+            Usually, efficient data structures are key to designing efficient algorithms.</p>
+            <a href="#" class="mat-button-class">View Topics</a>
+        </div>
+    </header>
+
+
+    <main>
+        <h1>
+            Learn Data Structures
+        </h1>
+        <p>
+            Go through the topics below and just click on the link to go to the resource.
+        </p>
+        <section class="datalinks">
+            <div class="topic-sprite"></div>
+            <section class="topic">
+                <h1 id="title">Arrays</h1>
+                <p id="desc">An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same
+                type together. This makes it easier to calculate the position of each element by simply adding an offset to a base
+                value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).</p>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">GeeksForGeeks</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="https://www.tutorialspoint.com/data_structures_algorithms/array_data_structure.htm" class="link">Tutorials Point</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">Wikipedia</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">Temporary</a>
+                </div>
+            </section>
+
+            <section class="topic">
+                <h1 id="title">Arrays</h1>
+                <p id="desc">An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same
+                type together. This makes it easier to calculate the position of each element by simply adding an offset to a base
+                value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).</p>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">GeeksForGeeks</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="https://www.tutorialspoint.com/data_structures_algorithms/array_data_structure.htm" class="link">Tutorials Point</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">Wikipedia</a>
+                </div>
+                <div class="item">
+                    <div class="up-arrow"></div>
+                    <p class="score">Score : 0</p>
+                    <a href="#" class="link">Temporary</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div id="team">
+            <h2>Our Team</h2>
+            <p>Pragun</p>
+            <p>Anubhav</p>
+            <p>Priyanshu</p>
+            <p>Kuldeep</p>
+        </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>Address: NIT Kurukshetra</p>
+            <p>Phone: +91-7042080779</p>
+            <p>Email: abc.xyz</p>
+        </div>
+        <div id="social">
+            <h2>Social</h2>
+            <div>
+                <span><i class="fab fa-facebook fa-2x"></i></span>
+                <span><i class="fab fa-twitter-square fa-2x"></i></span>
+                <span><i class="fab fa-youtube fa-2x"></i></span>
+                <span><i class="fab fa-linkedin fa-2x"></i></span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
