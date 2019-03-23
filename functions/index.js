@@ -103,7 +103,7 @@ app.post('/login.html', (req, res) => {
         };
         console.log(isLogged);
         users.doc(isLogged.uid).set(isLogged).then(() => {
-            users.doc(isLogged.uid).collection('links').add({link: 'none'});
+            users.doc(isLogged.uid).collection('links').doc(req.body.uid).set({link: 'null'});
         }).catch(() => {console.log('EROROROROROROROORRO');
         })
     }
