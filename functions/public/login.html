@@ -27,70 +27,30 @@
         crossorigin="anonymous">
     </script>
 
+    <link rel="stylesheet" href="styles/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+
+
 </head>
 <body>
     <a href="/" id="home" target="_self">HOME</a>
-    <input type="email" name="email" id="email">
-    <input type="password" name="pass" id="pass">
-    <button type="submit" id="regbtn">Register</button>
-    <button type="submit" id="logbtn">Login</button>
-    <button type="submit" id="logobtn">Logout</button>
+    <!-- Login Form -->
+    <div id="logged" class="main">
+        <label for="email" class="labels">Email : </label>
+        <input type="email" name="email" id="email" class="inputs">
+        <label for="pass" class="labels">Password : </label>
+        <input type="password" name="pass" id="pass" class="inputs">
+        <button type="submit" id="regbtn" class="mat-button-class">Register</button>
+        <button type="submit" id="logbtn" class="mat-button-class">Login</button>
+    </div>
+    <!-- Logout Form -->
+    <div id="logout" class="main">
+        <p id="useremail">Logged in : pragz111@gmail.com</p>
+        <button type="submit" id="logobtn" class="mat-button-class">Logout</button>
+    </div>
 
-    <script>
-        document.querySelector("#regbtn").addEventListener('click', e => {
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('pass').value;
-            const auth = firebase.auth();
-
-            let promise = auth.createUserWithEmailAndPassword(email, pass);
-
-            promise.catch(e => console.log(e.message));
-        })
-
-        document.querySelector("#logbtn").addEventListener('click', e => {
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('pass').value;
-            const auth = firebase.auth();
-
-            let promise = auth.signInWithEmailAndPassword(email, pass);
-
-            promise.catch(e => console.log(e.message));
-        })
-
-        document.querySelector("#logobtn").addEventListener('click', e => {
-            firebase.auth().signOut();
-        })
-
-
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser){
-                console.log(firebaseUser);
-                $.ajax({
-                    type:'POST',
-                    url:'login.html',
-                    data:{
-                        email: firebaseUser.email,
-                        uid: firebaseUser.uid
-                    },
-                    success: (res) => {
-                        document.querySelector('#home').click();
-                    }
-                })
-            }
-            else{
-                console.log(firebaseUser);
-                $.ajax({
-                    type:'POST',
-                    url:'login.html',
-                    data: {uid: null},
-                    success: (res) => {
-                        document.querySelector('#home').click();
-                    }
-                })
-            }
-        })
-
-    </script>
+    <!-- Login Script -->
+    <script src="js/login.js"></script>
 
 
 </body>

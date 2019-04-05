@@ -32,23 +32,8 @@
 </head>
 <body>
 
-        <script>
-            $(document).ready(() => {
-                $.ajax({
-                    type: 'POST',
-                    url: '/',
-                    success: (res) => {
-                        console.log(res.email);
-                        if (res.email){
-                            document.querySelector('#hmm').innerHTML = `<a href="login.html" target="_blank" class="nav-link">Login</a><p>${res.email}</p>`;
-                        }
-                        else {
-                            document.querySelector('#hmm').innerHTML = `<a href="login.html" target="_blank" class="nav-link">Login</a>`;
-                        }
-                    }
-                })
-            })
-        </script>
+        <script src="js/index.js"></script>
+
 
     <header>
         <nav>
@@ -56,7 +41,7 @@
             <div id="nav-links">
                 <a href="#topics" target="_self" class="nav-link"><div>Topics</div></a>
                 <a href="html/feedback.html" target="_self" class="nav-link">Feedback</a>
-                <div id="hmm" class="nav-link"></div>
+                <div id="userstate" class="nav-link"><a href="login.html" target="_self" class="nav-link">Login</a></div>
 
                 <!-- <button type="button" id="loginbtn" class="nav-link">Login</button> -->
             </div>
@@ -106,7 +91,7 @@
                     <a href="html/datastructures.html" target="_self"><div>Data Structures</div></a>
                     <a href="#"><div>Algorithms</div></a>
                     <a href="#"><div>Networks</div></a>
-                    <a href="#"><div>Web Development</div></a>
+                    <a target="_self" href="html/webdev.html"><div>Web Development</div></a>
                     <a href="#"><div>Artificial Intelligence</div></a>
                     <a href="#"><div>Database</div></a>
                     <a href="#"><div>Languages</div></a>

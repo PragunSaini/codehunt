@@ -1,46 +1,112 @@
 {
-    "datalinks": [
+    "database": [
         {
-            "title": "array",
-            "desc": "An array is a collection of items",
-            "links": [
-                {
-                    "key": "a",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                },
-                {
-                    "key": "b",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                },
-                {
-                    "key": "c",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                }
-            ]
+            "key": "a",
+            "score": 0,
+            "title": "Javatpoint",
+            "link": "https://www.javatpoint.com/dbms-tutorial"
         },
         {
-            "title": "linked list",
-            "desc": "An linked list is a collection of items",
-            "links": [
-                {
-                    "key": "d",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                },
-                {
-                    "key": "e",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                },
-                {
-                    "key": "f",
-                    "score": "0",
-                    "link": "Geeks for Geeks"
-                }
-            ]
+            "key": "b",
+            "score": 0,
+            "title": "Tutorials point",
+            "link": "http://www.tutorialspoint.com/dbms/"
+        },
+        {
+            "key": "c",
+            "score": 0,
+            "title": "Study to night",
+            "link": "https://www.studytonight.com/dbms/"
+        },
+        {
+            "key": "d",
+            "score": 0,
+            "title": "Geeks For Geeks",
+            "link": "https://www.geeksforgeeks.org/dbms/"
+        },
+        {
+            "key": "e",
+            "score": 0,
+            "title": "W3 Schools",
+            "link": "https://www.w3schools.in/dbms/intro/"
+        },
+        {
+            "key": "f",
+            "score": 0,
+            "title": "BeginnersBook",
+            "link": "https://beginnersbook.com/2015/04/dbms-tutorial/"
+        },
+        {
+            "key": "g",
+            "score": 0,
+            "title": "Tutorialride",
+            "link": "https://www.tutorialride.com/dbms/database-tutorial.htm"
+        }
+    ],
+
+    "ai": [
+        {
+            "key": "h",
+            "score": 0,
+            "title": "Tutuorialspoint",
+            "link": "https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_overview.htm"
+        },
+        {
+            "key": "i",
+            "score": 0,
+            "title": "Youtube",
+            "link": "https://www.youtube.com/watch?v=0vfZFL-ftz0"
+        },
+        {
+            "key": "j",
+            "score": 0,
+            "title": "Guru99",
+            "link": "https://www.guru99.com/artificial-intelligence-tutorial.html"
+        },
+        {
+            "key": "k",
+            "score": 0,
+            "title": "Udacity",
+            "link": "https://in.udacity.com/course/intro-to-artificial-intelligence--cs271?https:%2F%2Feu.udacity.com%2Fcourse%2Fandroid-basics-user-interface--ud834=&gclid=Cj0KCQjwkIzlBRDzARIsABgXqV_JDogdddcqKuo5tIf0GoYAUz5qyD5Es3NhYKbg7BZ97BqhHeb80PYaAhyeEALw_wcB"
+        }
+    ],
+
+    "webdevelopment": [
+        {
+            "key": "l",
+            "score": 0,
+            "title": "Web Development Training and Tutorials(lynda)",
+            "link": "https://www.lynda.com/Web-Development-training-tutorials/1471-0.html"
+        },
+        {
+            "key": "m",
+            "score": 0,
+            "title": "LearnCode",
+            "link": "https://www.youtube.com/watch?v=3JluqTojuME"
+        },
+        {
+            "key": "n",
+            "score": 0,
+            "title": "W3Resource",
+            "link": "https://www.w3resource.com/"
+        },
+        {
+            "key": "o",
+            "score": 0,
+            "title": "After Hours Programming",
+            "link": "https://www.afterhoursprogramming.com/"
+        },
+        {
+            "key": "p",
+            "score": 0,
+            "title": "Script Tutorial",
+            "link": "https://www.script-tutorials.com/"
+        },
+        {
+            "key": "q",
+            "score": 0,
+            "title": "Tutorialspoint",
+            "link": "https://www.tutorialspoint.com/internet_technologies/websites_development.htm"
         }
     ]
 }
