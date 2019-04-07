@@ -65,6 +65,16 @@ nav h1 {
     margin-left: 2em;
     font-size: 2em;
     justify-self: left;
+    color: #3C226E;
+}
+
+nav h1 > a {
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+nav h1 > a:active {
+    color: white;
 }
 
 /* Navbar sub-headings */

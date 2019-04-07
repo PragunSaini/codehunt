@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User Maker</title>
+    <title>Login | CodeHunt</title>
 
     <!-- Firebase App is always required and must be first -->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
@@ -27,13 +27,14 @@
         crossorigin="anonymous">
     </script>
 
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="styles/login.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
 
 
 </head>
 <body>
-    <a href="/" id="home" target="_self">HOME</a>
+    <a href="index.html" id="home" target="_self">Home</a>
     <!-- Login Form -->
     <div id="logged" class="main">
         <label for="email" class="labels">Email : </label>
@@ -45,7 +46,7 @@
     </div>
     <!-- Logout Form -->
     <div id="logout" class="main">
-        <p id="useremail">Logged in : pragz111@gmail.com</p>
+        <p id="useremail"></p>
         <button type="submit" id="logobtn" class="mat-button-class">Logout</button>
     </div>
 

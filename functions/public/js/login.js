@@ -23,24 +23,28 @@ $(document).ready(() => {
 
 // Register button click evennt - register a user
 document.querySelector("#regbtn").addEventListener('click', e => {
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('pass').value;
-    const auth = firebase.auth();
+    if (validate()){
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('pass').value;
+        const auth = firebase.auth();
 
-    let promise = auth.createUserWithEmailAndPassword(email, pass);
+        let promise = auth.createUserWithEmailAndPassword(email, pass);
 
-    promise.catch(e => alert(e.message));
+        promise.catch(e => alert(e.message));
+    }
 })
 
 // Login a user
 document.querySelector("#logbtn").addEventListener('click', e => {
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('pass').value;
-    const auth = firebase.auth();
+    if (validate()){
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('pass').value;
+        const auth = firebase.auth();
 
-    let promise = auth.signInWithEmailAndPassword(email, pass);
+        let promise = auth.signInWithEmailAndPassword(email, pass);
 
-    promise.catch(e => alert(e.message));
+        promise.catch(e => alert("Please register first."));
+    }
 })
 
 // Logout any logged user
@@ -88,3 +92,44 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         })
     }
 })
+
+
+
+// Input Validation Function
+function validate(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("pass");
+    var passw =  /^[A-Za-z]\w{7,14}$/;
+
+    if(email.value == ""){
+        alert("Please enter your email.");
+        return false;
+    }
+
+    if(password.value == ""){
+        alert("Please enter a password.");
+        return false;
+    }
+
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+        alert("Please enter a valid email.");
+        return false;
+    }
+
+    if(!email.checkValidity()){
+        alert(email.validationMessage);
+        return false;
+    }
+
+    if(!password.checkValidity()){
+        alert(password.validationMessage);
+        return false;
+    }
+
+    if (!password.value.match(passw)) {
+        alert('Password must have letters as well as numbers.');
+        return false;
+    }
+
+    return true;
+}

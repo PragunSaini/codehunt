@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Feedback</title>
+    <title>Feedback | CodeHunt</title>
 
+    <link rel="icon" href="../icon.png">
     <link rel="stylesheet" href="../styles/feedback.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 
+    <script src="../js/feedback.js"></script>
+
     <header>
         <nav>
-            <h1>Website<i class="fas fa-bars"></i></h1>
+            <h1><a href="../index.html" target="_self">CodeHunt</a></h1>
             <div id="nav-links">
-                <a href="#topics" target="_self" class="nav-link"><div>Home</div></a>
-                <a href="#" target="_blank" class="nav-link">Login</a>
+                <a href="../index.html" target="_self" class="nav-link"><div>Home</div></a>
+                <a href="../login.html" target="_self" class="nav-link" id="userstate">Login</a>
             </div>
         </nav>
         <div class="stripes">
@@ -27,7 +30,7 @@
         </div>
         <div id="banner-content">
             <h1>FeedBack Form</h1>
-            <p>Want to send any query? Or want us to add a resource.
+            <p>Want to ask any query? Or want us to add a resource.
                 Send a response via this feedback form.
             </p>
         </div>
@@ -52,25 +55,8 @@
             </div>
 
             <div class="form-element">
-                <label class="label" for="phone">Phone/Mobile : </label>
+                <label class="label" for="phone">Mobile No  : </label>
                 <input class="input" type="text" id="phone" name="phone">
-            </div>
-
-            <div class="form-element">
-                <label class="label" for="ageinput">Select appropriate age range : </label>
-                <div class="input-age">
-                    <label for="lt18">< 18
-                        <input type="radio" id="lt18" name="age" value="lt18">
-                    </label>
-
-                    <label for="18t40">18 - 40
-                        <input type="radio" id="18t40" name="age" value="18t40">
-                    </label>
-
-                    <label for="gt40">> 40
-                        <input type="radio" id="gt40" name="age" value="gt40">
-                    </label>
-                </div>
             </div>
 
             <div class="form-element">
@@ -80,11 +66,11 @@
                         <input type="checkbox" id="feedback" name="query" value="feedback">
                     </label>
 
-                    <label for="linkadd">Addition of link
+                    <label for="linkadd">Suggestions
                         <input type="checkbox" id="linkadd" name="query" value="linkadd">
                     </label>
 
-                    <label for="help">Help
+                    <label for="help">Need Help?
                         <input type="checkbox" id="help" name="query" value="help">
                     </label>
                 </div>
@@ -97,9 +83,8 @@
 
             <div class="form-element">
                 <button class="mat-button-class submit" type="submit">Submit</button>
-                <button class="mat-button-class clear" type="reset">Clear</button>
+                <button class="mat-button-class clear" type="reset">Cancel</button>
             </div>
-
         </form>
 
     </main>
@@ -113,22 +98,21 @@
             <p>Kuldeep</p>
         </div>
         <div id="contact">
-            <h2>Contact</h2>
+            <h2>Contact Us</h2>
             <p>Address: NIT Kurukshetra</p>
-            <p>Phone: +91-7042080779</p>
-            <p>Email: abc.xyz</p>
+            <p>Phone: +91-704208XXXX</p>
+            <p>Email: codehunt@gmail.com</p>
         </div>
         <div id="social">
             <h2>Social</h2>
             <div>
-                <span><i class="fab fa-facebook fa-2x"></i></span>
-                <span><i class="fab fa-twitter-square fa-2x"></i></span>
-                <span><i class="fab fa-youtube fa-2x"></i></span>
-                <span><i class="fab fa-linkedin fa-2x"></i></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://facebook.com"><i class="fab fa-facebook fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://youtube.com"><i class="fab fa-youtube fa-2x"></i></a></span>
+                <span><a style="color: rgb(82, 80, 80);" href="https://linkedin.com"><i class="fab fa-linkedin fa-2x"></i></a></span>
             </div>
         </div>
     </footer>
 
-    <script type="text/javascript" src="../js/feedback.js"></script>
 </body>
 </html>

@@ -64,9 +64,14 @@ nav h1 {
     grid-template-columns: 11fr 1fr;
 }
 
-nav h1 i {
-    visibility: hidden;
+nav h1 > a {
+    text-decoration: none;
+    color: white;
 }
+
+/* nav h1 i {
+    visibility: hidden;
+} */
 
 #nav-links {
     display: grid;
@@ -318,6 +323,7 @@ footer #contact {
 }
 
 footer #social {
+    padding: 1em 5em;
     grid-column: 8 / 10;
     text-align: center;
 }

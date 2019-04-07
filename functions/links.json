@@ -48,7 +48,7 @@
         {
             "key": "h",
             "score": 0,
-            "title": "Tutuorialspoint",
+            "title": "Tutorialspoint",
             "link": "https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_overview.htm"
         },
         {
@@ -108,5 +108,226 @@
             "title": "Tutorialspoint",
             "link": "https://www.tutorialspoint.com/internet_technologies/websites_development.htm"
         }
-    ]
+    ],
+    "operatingsystems":[
+    {
+        "key": "aa",
+        "score": 0,
+        "title": "Geeks for Geeks",
+        "link": "https://www.geeksforgeeks.org/operating-systems/"
+    },
+    {
+        "key": "r",
+        "score":0,
+        "title":"Udacity",
+        "link":"https://in.udacity.com/course/introduction-to-operating-systems--ud923"
+    },
+    {
+        "key":"s",
+        "score":0,
+        "title":"NPTEL",
+        "link":"https://onlinecourses.nptel.ac.in/noc16_cs10/preview"
+    },
+    {
+        "key":"t",
+        "score":0,
+        "title":"JavaTpoint",
+        "link":"https://www.javatpoint.com/os-tutorial"
+    },
+    {
+        "key":"u",
+        "score":0,
+        "title":"StudyTonight",
+        "link":"https://www.studytonight.com/operating-system/"
+    },
+    {
+        "key":"v",
+        "score":0,
+        "title":"W3Schools",
+        "link":"https://www.w3schools.in/operating-system-tutorial/intro/"
+    },
+    {
+        "key":"w",
+        "score":0,
+        "title":"ScanfTree",
+        "link":"http://scanftree.com/operating-system/"
+    },
+    {
+        "key":"x",
+        "score":0,
+        "title":"TutorialsPoint",
+        "link":"https://www.tutorialspoint.com/operating_system/"
+    },
+    {
+        "key":"y",
+        "score":0,
+        "title":"Guru99",
+        "link":"https://www.guru99.com/operating-system-tutorial.html"
+    },
+    {
+        "key":"z",
+        "score":0,
+        "title":"CodesCracker",
+        "link":"https://codescracker.com/operating-system/"
+    }
+],
+    "appdev":[
+    {
+        "key": "ab",
+        "score": 0,
+        "title": "Tutorials Point",
+        "link": "https://www.tutorialspoint.com/android/"
+    },
+    {
+        "key": "ac",
+        "score": 0,
+        "title": "Geeks for Geeks",
+        "link": "https://www.geeksforgeeks.org/android-app-development-fundamentals-for-beginners/"
+    },
+    {
+        "key": "ad",
+        "score": 0,
+        "title": "JavaTpoint",
+        "link": "https://www.javatpoint.com/android-tutorial"
+    },
+    {
+        "key": "ae",
+        "score": 0,
+        "title": "Vogella",
+        "link": "https://www.vogella.com/tutorials/android.html"
+    },
+    {
+        "key": "af",
+        "score": 0,
+        "title": "Udemy",
+        "link": "https://www.udemy.com/complete-android-n-developer-course/?ranMID=39197&ranEAID=jU79Zysihs4&ranSiteID=jU79Zysihs4-muVnMzsyArDFQrSFxhKRJQ&LSNPUBID=jU79Zysihs4"
+    },
+    {
+        "key": "ag",
+        "score": 0,
+        "title": "Udacity",
+        "link": "https://in.udacity.com/course/android-basics-user-interface--ud834-india"
+    },
+    {
+        "key": "ah",
+        "score": 0,
+        "title": "Google Developers Training",
+        "link": "https://developers.google.com/training/android//"
+    }
+],
+    "algorithms":[
+    {
+        "key": "ai",
+        "score": 0,
+        "title": " Fundamentals of Algorithms - GeeksforGeeks",
+        "link": "http://www.geeksforgeeks.org/fundamentals-of-algorithms/"
+    },
+    {
+        "key": "aj",
+        "score": 0,
+        "title": "Algorithms by Princeton University - (coursera.org)",
+        "link": "https://www.coursera.org/learn/algorithms-part1?ranMID=40328&ranEAID=jU79Zysihs4&ranSiteID=jU79Zysihs4-xyQ_kgrnYHKdZUTuAY2JMw&siteID=jU79Zysihs4-xyQ_kgrnYHKdZUTuAY2JMw&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=jU79Zysihs4"
+    },
+    {
+        "key": "ak",
+        "score": 0,
+        "title": "Introduction to Algorithms - MIT OpenCourseWare (ocw.mit.edu)",
+        "link": "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/"
+    },
+    {
+        "key": "al",
+        "score": 0,
+        "title": "Learn Algorithms by Solving Challenges (learneroo.com)",
+        "link": "https://www.learneroo.com/subjects/8"
+    },
+    {
+        "key": "am",
+        "score": 0,
+        "title": "Algorithms Specialization (coursera.org)",
+        "link": "https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=40328&murl=https://www.coursera.org/specializations/data-structures-algorithms"
+    },
+    {
+        "key": "an",
+        "score": 0,
+        "title": "Master the Coding Interview: Data Structures and Algorithms (udemy.com)",
+        "link": "https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=39197&murl=https://www.udemy.com/master-the-coding-interview-data-structures-algorithms"
+    }
+],
+    "datastructures":[
+    {
+        "key": "ao",
+        "score": 0,
+        "title": " Geeks for Geeks",
+        "link": "https://www.geeksforgeeks.org/data-structures/"
+    },
+    {
+        "key": "ap",
+        "score": 0,
+        "title": "Data Structures - UC Berkeley (archive.org)",
+        "link": "https://archive.org/details/ucberkeley-webcast-PL-XXv-cvA_iDD4nnsfVIqPFORTgZi9xRp"
+    },
+    {
+        "key": "aq",
+        "score": 0,
+        "title": "Data Structures Specialization (coursera.org)",
+        "link": "https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=40328&murl=https://www.coursera.org/specializations/data-structures-algorithms"
+    },
+    {
+        "key": "ar",
+        "score": 0,
+        "title": "Master the Coding Interview : Data Structures (udemy.com)",
+        "link": "https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=39197&murl=https://www.udemy.com/master-the-coding-interview-data-structures-algorithms"
+    },
+    {
+        "key": "as",
+        "score": 0,
+        "title": "Data Structures - MyCodeSchool",
+        "link": "http://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P"
+    },
+    {
+        "key": "at",
+        "score": 0,
+        "title": "Data Structures in Hindi - MySirG (youtube.com)",
+        "link": "https://www.mysirg.com/courses/data-structure-videos/"
+    }
+],
+"networks":[
+    {
+        "key": "au",
+        "score": 0,
+        "title": " StudyTonight",
+        "link": "https://www.studytonight.com/computer-networks"
+    },
+    {
+        "key": "av",
+        "score": 0,
+        "title": "Geeks for Geeks",
+        "link": "https://www.geeksforgeeks.org/computer-network-tutorials/"
+    },
+    {
+        "key": "aw",
+        "score": 0,
+        "title": "CodesCracker",
+        "link": "https://codescracker.com/networking"
+    },
+    {
+        "key": "ax",
+        "score": 0,
+        "title": "Introduction to Computer Networks for Non-Techies (udemy.com)",
+        "link": "https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=39197&murl=https://www.udemy.com/introduction-to-computer-networks"
+    },
+    {
+        "key": "ay",
+        "score": 0,
+        "title": "Networking - By Eli The Computer Guy (youtube.com)",
+        "link": "https://www.youtube.com/playlist?list=PLF360ED1082F6F2A5"
+    },
+    {
+        "key": "az",
+        "score": 0,
+        "title": "JavaTpoint",
+        "link": "https://www.javatpoint.com/computer-network-tutorial"
+    }
+]
+
 }

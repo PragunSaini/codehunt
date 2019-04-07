@@ -60,9 +60,10 @@ $(document).ready(() => {
                 loggedUser.uid = res.uid;
                 loggedUser.email = res.email;
                 loggedUser.userVoted = res.voted;
+                document.getElementById('username').textContent = res.email;
             }
             let data = "";
-            data += `<h3>Click any link below to study Web Ddevelopment</h3>`;
+            data += `<h3>Click any link below to study Web Development</h3>`;
             links = res['links'];
             for (let i = 0; i < links.length; i++){
                 data += `<div class="item" id="${links[i].key}">`;
@@ -79,7 +80,7 @@ $(document).ready(() => {
             if (loggedUser.uid != null){
                 console.log(loggedUser.userVoted);
                 for(let i = 0; i < loggedUser.userVoted.length; i++){
-                    let element = document.querySelector("#" + loggedUser.userVoted[i]);
+                    let element = document.getElementById(loggedUser.userVoted[i]);
                     if (element){
                         element.firstChild.style.borderColor = 'rgba(255, 0, 0, 0.824) transparent';
                     }

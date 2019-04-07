@@ -50,6 +50,21 @@ function upvoted(id){
 
 // on page ready
 $(document).ready(() => {
+
+    $.ajax({
+        type: 'POST',
+        url: '/',
+        success: (res) => {
+            console.log(res.email);
+            if (res.email){
+                document.querySelector('#userstate').innerHTML = res.email;
+            }
+            else {
+                document.querySelector('#userstate').innerHTML = "Login";
+            }
+        }
+    })
+
     $.ajax({
         type: 'POST',
         url: 'database.html',
@@ -62,7 +77,7 @@ $(document).ready(() => {
                 loggedUser.userVoted = res.voted;
             }
             let data = "";
-            data += `<h3>Click any link below to study Web Ddevelopment</h3>`;
+            data += `<h3>Click any link below to study Database</h3>`;
             links = res['links'];
             for (let i = 0; i < links.length; i++){
                 data += `<div class="item" id="${links[i].key}">`;
@@ -79,7 +94,7 @@ $(document).ready(() => {
             if (loggedUser.uid != null){
                 console.log(loggedUser.userVoted);
                 for(let i = 0; i < loggedUser.userVoted.length; i++){
-                    let element = document.querySelector("#" + loggedUser.userVoted[i]);
+                    let element = document.getElementById(loggedUser.userVoted[i]);
                     if (element){
                         element.firstChild.style.borderColor = 'rgba(255, 0, 0, 0.824) transparent';
                     }

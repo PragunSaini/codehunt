@@ -216,12 +216,13 @@ header .stripes :nth-child(3) {
     font-size: 2em;
     color: #00BA7A;
     margin: .5em 0;
+    text-align: center;
 }
 
 #about p {
     grid-column: 1 / 2;
-    width: 60%;
-    text-align: right;
+    width: 80%;
+    text-align: left;
     font-size: 1.25em;
     line-height: 1.3em;
     color: rgba(63, 60, 60, 0.897);
@@ -393,6 +394,7 @@ footer #contact {
 }
 
 footer #social {
+    padding: 1em 5em;
     grid-column: 8 / 10;
     text-align: center;
 }
