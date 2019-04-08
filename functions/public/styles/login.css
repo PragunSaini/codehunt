@@ -109,7 +109,7 @@ body > a {
     background: rgb(91, 106, 235);
     box-shadow: none;
 }
-/* 
+/*
 #logged {
     display: none;
 }
@@ -126,4 +126,44 @@ body > a {
     grid-column: span 6;
     width: 20%;
     justify-self: center;
+}
+
+/* GLOBAL STYLES END */
+
+/* MEDIA QUERIES BEGIN */
+
+/* Small screens like Smartphones */
+@media (max-width: 600px){
+
+    .main {
+        margin-left: 30px;
+    }
+
+    .labels {
+        grid-column: span 6;
+        justify-self: center;
+    }
+
+    .inputs {
+        grid-column: span 6;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .main button {
+        width: 100%;
+    }
+
+    #regbtn {
+        grid-column: span 6;
+    }
+
+    #logbtn {
+        grid-column: span 6;
+    }
+
+    #logobtn {
+        width: 100%;
+    }
+
 }

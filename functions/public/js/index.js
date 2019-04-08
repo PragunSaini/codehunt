@@ -13,6 +13,17 @@ $(document).ready(() => {
             }
         }
     })
+
+    // add mobile bars icon
+    document.querySelector("#bars").addEventListener('click', function(){
+        if (document.querySelector("#nav-links").style.display == 'grid'){
+            document.querySelector("#nav-links").style.display = 'none';
+        }
+        else {
+            document.querySelector("#nav-links").style.display = 'grid';
+        }
+    })
+
 })
 
 
