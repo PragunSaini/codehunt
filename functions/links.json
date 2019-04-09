@@ -328,6 +328,38 @@
         "title": "JavaTpoint",
         "link": "https://www.javatpoint.com/computer-network-tutorial"
     }
+],
+"cloudcomputing":[
+    {
+        "key": "ba",
+        "score": 0,
+        "title": "Tutorials Point",
+        "link": "https://www.tutorialspoint.com/cloud_computing/"
+    },
+    {
+        "key": "bc",
+        "score": 0,
+        "title": "Cloud Computing tutorials for beginners(Guru99) ",
+        "link": "https://www.guru99.com/cloud-computing-for-beginners.html"
+    },
+    {
+        "key": "bd",
+        "score": 0,
+        "title": "Learn Cloud Computing tutorials-JavaTpoint ",
+        "link": "https://www.javatpoint.com/cloud-computing-tutorial"
+    },
+    {
+        "key": "be",
+        "score": 0,
+        "title": "Cloud Computing - W3schools",
+        "link": "https://www.w3schools.in/cloud-computing/cloud-computing/"
+    },
+    {
+        "key": "bf",
+        "score": 0,
+        "title": "A Complete Cloud Computing Tutorial | Simplilearn",
+        "link": "https://www.simplilearn.com/cloud-computing-tutorial-video"
+    }
 ]
 
 }
