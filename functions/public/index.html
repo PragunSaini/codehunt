@@ -31,6 +31,21 @@
         crossorigin="anonymous">
     </script>
 
+
+    <!-- Site search custom search box script -->
+   	<script type="text/javascript">
+   /* Create a configuration object */
+		var ss360Config = {
+		  /* Your site id */
+		  siteId: "codehunt.cf",
+		  /* The selector to the input field (search box) */
+		  searchBox: {selector: "#searchBox"}
+		};
+	</script>
+	<script type="module" src="https://cdn.sitesearch360.com/sitesearch360-v12.mjs"></script>
+	<script nomodule src="https://cdn.sitesearch360.com/sitesearch360-v12.min.js" async></script>
+
+
 </head>
 <body>
 
@@ -62,7 +77,9 @@
             <div id="search">
                 <h1>Enter a topic to search:</h1>
                 <div id="search-container">
-                    <input type="text"/>
+                    <!-- <input type="text"/> -->
+                    <!-- custom search input -->
+                    <input id="searchBox" type="text"/>
                     <button type="button" class="mat-button-class">Go</button>
                 </div>
             </div>
