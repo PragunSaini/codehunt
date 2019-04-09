@@ -146,9 +146,7 @@ app.post('/html/changeVotes', (req, res) => {
             console.error("Error writing document: ", error);
         });
     }
-
-    res.send('Voting done');
-
+    res.send(isLogged.uid);
 })
 
 
